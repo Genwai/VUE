@@ -1,0 +1,22 @@
+{
+    "name": "vue",
+    "version": "1.0.0",
+    "description": "2017.1.8 first-day-vue-learning",
+    "main": "index.js",
+    "directories": {
+        "example": "example"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Genwai/VUE.git"
+    },
+    "author": "genwai",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Genwai/VUE/issues"
+    },
+    "homepage": "https://github.com/Genwai/VUE#readme"
+}
