@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>Helloworld</title>
+    <style>
+        .classA {
+            color: red;
+        }
+        
+        .classAA {
+            background: khaki;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+    <hr>
+    <div id="app">
+
+        <i v-bind:class="className">like you </i>
+        <i v-bind:class="{classA:isTrue}">判断哟 </i>
+        <!-- <i v-bind:class="{isTrue?classA:classAA}">三元判断哟 </i> -->
+        <hr>
+        <input type="checkbox" name="" id="ss" v-model="isTrue"><label for="ss">{{isTrue}}</label>
+        <div :class="{color:blue}">nice</div>
+    </div>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+
+                className: 'classA classAA',
+                classA: 'classA',
+                classAA: 'classAA',
+                isTrue: true,
+
+            }
+        })
+    </script>
+</body>
+
+</html>

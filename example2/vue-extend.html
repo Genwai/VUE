@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-if & v-show & v-else</title>
+</head>
+
+<body>
+    <h1>v-extend</h1>
+    <hr>
+    <div id="app">
+        <h1>vue.extent:扩展实例构造器</h1>
+        <hr>
+        <author></author>
+        <div id="authorid"></div>
+    </div>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                isLogin: false
+            }
+        })
+
+        // 标签的属性是需要绑定的
+        var authorExtend = Vue.extend({
+                template: "<p><a :href='authorurl'>{{authorName}}</a></p>", //这是模板
+                data() { //这是es6写法lo
+                    return {
+                        authorName: 'genwai',
+                        authorurl: 'http://www.baidu.com'
+                    }
+                }
+            })
+            // 扩展器：绑定加载到author ,可以直接写标签、写id 写class
+            // 创建 authorExtend 实例，并挂载到一个元素上。
+        new authorExtend().$mount('author');
+        new authorExtend().$mount('#authorid'); //直接进行复用
+    </script>
+</body>
+
+</html>

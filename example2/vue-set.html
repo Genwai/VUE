@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-set</title>
+</head>
+
+<body>
+    <h1>vue-set 构造器</h1>
+    <p>目的是改变外部数据方式</p>
+    <p>什么是外部数据，就是不在Vue构造器里里的data处声明，而是在外部声明，然后在data处引用就可以了。外部数据的加入让程序更加灵活，我们可以在外部获取任何想要的数据形式，然后让data引用。</p>
+    <hr>
+    <div id="app">
+        <p>{{this.count}}</p>
+        <button>add</button>
+    </div>
+    <button onclick="add()">add</button>
+
+    <script type="text/javascript">
+        function add() {
+            // app.count++ //也可以这么直接对app进行实例化操作
+        }
+        var outData = {
+            count: 1,
+            goodName: 'genwai'
+        }
+        var app = new Vue({
+            el: '#app',
+            data: outData,
+
+        })
+    </script>
+</body>
+
+</html>
